@@ -8,7 +8,11 @@ class VIEW3D_PT_BCIT_armature_panel(bpy.types.Panel):
     bl_region_type = "UI"
     bl_space_type = "VIEW_3D"
     bl_options = {"DEFAULT_CLOSED"}
-    bl_category = "BCIT tools"
+    
+    @classmethod
+    def poll(cls, context):
+        objtype = context.active_object.type
+        return objtype == "ARMATURE"
 
     def draw(self, context):
         layout = self.layout
@@ -21,9 +25,3 @@ class VIEW3D_PT_BCIT_armature_panel(bpy.types.Panel):
         row = layout.row(align=False)
         row.prop(arm,"display_type",text="shape")
 # TODO find and add some useful amature shorcuts to put in this
-
-def register():
-    bpy.utils.register_class(VIEW3D_PT_BCIT_armature_panel)
-
-def unregister():
-    bpy.utils.unregister_class(VIEW3D_PT_BCIT_armature_panel)
