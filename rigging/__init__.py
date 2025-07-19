@@ -4,7 +4,7 @@ import bpy
 class VIEW3D_PT_BCIT_rigging_panel(bpy.types.Panel):
     #labels
     bl_idname = "VIEW3D_PT_BCIT_rigging_panel"
-    bl_label = "rig tools"
+    bl_label = "rigging panel"
     # placement
     bl_region_type = "UI"
     bl_space_type = "VIEW_3D"
