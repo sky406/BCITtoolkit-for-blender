@@ -25,5 +25,5 @@ def register():
     print("on")
 
 def unregister():
-    rig.unregister
+    rig.unregister()
     print("off")

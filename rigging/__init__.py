@@ -10,7 +10,13 @@ class VIEW3D_PT_BCIT_rigging_panel(bpy.types.Panel):
     bl_options = {"DEFAULT_CLOSED"}
     bl_category="BCIT tools"
 
+    def poll(cls,context):
+        pass
+        # return(context.selection_objects == bpy.types.Armature)
     def draw(self, context):
+        print(bpy.context.selected_objects)
+        print(bpy.context.active_object)
+        print(context.selected_objects)
         layout = self.layout
         # layout.panel(ap.VIEW3D_PT_BCIT_armature_panel.bl_idname)
 
