@@ -44,7 +44,7 @@ class turnAround(bpy.types.Operator):
 class VIEW3DturnaroundPanel(bpy.types.Panel):
     bl_idname = "VIEW3DturnarounDPanel"
     bl_label = "microwave"
-    bl_category = "shortcuts"
+    bl_category = "BCIT tools"
     bl_region_type = "UI"
     bl_space_type = "VIEW_3D"
 

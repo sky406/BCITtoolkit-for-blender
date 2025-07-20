@@ -8,7 +8,7 @@ class VIEW3D_PT_BCIT_rigging_panel(bpy.types.Panel):
     # placement
     bl_region_type = "UI"
     bl_space_type = "VIEW_3D"
-    bl_options = {"DEFAULT_CLOSED"}
+    # bl_options =
     bl_category="BCIT tools"
     
     @classmethod
