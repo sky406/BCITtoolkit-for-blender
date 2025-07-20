@@ -13,6 +13,8 @@ class turnAround(bpy.types.Operator):
         # self.report(
         #     {'INFO'},"num"
         #     )
+        # clear animation data 
+        context.active_object.animation_data_clear()
         # get start and end frames
         start= context.scene.frame_start
         end = context.scene.frame_end
@@ -55,7 +57,8 @@ class VIEW3DturnaroundPanel(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
-        layout.operator("data.microwave")
+        row = layout.row(heading="spin that object")
+        row.operator("data.microwave")
     
         
 # for testing purposes
