@@ -10,9 +10,6 @@ class turnAround(bpy.types.Operator):
     turn_direction: bpy.props.IntVectorProperty(name="turndirection",soft_min=-2,soft_max=2,default=(0,0,1))
 
     def execute(self, context):
-        # self.report(
-        #     {'INFO'},"num"
-        #     )
         # clear animation data 
         context.active_object.animation_data_clear()
         # get start and end frames
@@ -60,10 +57,11 @@ class VIEW3DturnaroundPanel(bpy.types.Panel):
         row = layout.row(heading="spin that object")
         row.operator("data.microwave")
     
-        
-# for testing purposes
-bpy.utils.register_class(turnAround)
-bpy.utils.register_class(VIEW3DturnaroundPanel)
+classes = [turnAround,VIEW3DturnaroundPanel] 
+
+# # for testing purposes
+# bpy.utils.register_class(turnAround)
+# bpy.utils.register_class(VIEW3DturnaroundPanel)
 
 # bpy.utils.unregister_class(turnAround)
 # bpy.utils.unregister_class(VIEW3DturnaroundPanel)

@@ -1,5 +1,6 @@
 import bpy 
 from . import rigging as rig
+from . import general as gen
 bl_info = {
     "name":"BCIT tools",
     "blender":(4,4,0),
@@ -17,13 +18,13 @@ bl_info = {
 
 #     def draw(self,context):
 #         layout = self.layout
-classes = [rig.VIEW3D_PT_BCIT_rigging_panel]
-
 
 def register():
     rig.register() 
+    gen.register()
     print("on")
 
 def unregister():
     rig.unregister()
+    gen.unregister()
     print("off")
