@@ -13,9 +13,9 @@ class renameSettings(bpy.types.PropertyGroup):
     ]
     
 
-    prefix: bpy.props.StringProperty(name="prefix",description="its a prefix")
-    suffix: bpy.props.StringProperty(name="suffix")
-    replacement: bpy.props.StringProperty(name="replace")
+    prefix: bpy.props.StringProperty(name="prefix",description="what apppears before the name")
+    suffix: bpy.props.StringProperty(name="suffix",description="what appears after the name")
+    replacement: bpy.props.StringProperty(name="replace",description="what will replace the name")
     objType: bpy.props.EnumProperty(
         name="object type",
         items=types,
